@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boclips API Example</title>
+    <!-- Load Boclips Player JavaScript library -->
+    <script src="https://player.boclips.com/player.js"></script>
+  </head>
+  <body>
+    <div id="player"></div>
+    <script>
+      // Load Boclips Player with video ID and access token
+      const playerId = "player";
+      const videoId = "629f10666fa9f91242578998"; // replace with actual video ID
+      const accessToken = "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJCMlJqWTltdHNOd1YwRU5vRzN2blEtUjkyal9JUmRmbmo1UnBUeFRJVmZZIn0"; // replace with actual access token
+      const options = {
+        videoId: videoId,
+        accessToken: accessToken,
+      };
+      const player = new BoclipsPlayer(playerId, options);
+      player.load();
+    </script>
+  </body>
+</html>
